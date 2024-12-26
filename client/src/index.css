@@ -1,5 +1,5 @@
 :root {
-  --orange-color: #FF8717;
+  --primary-orange: #FF8717;
   --button--dark-gray: #E5E5E5;
   --button--light-gray: #E6E6E6;
 }
@@ -26,8 +26,8 @@ button {
 }
 
 button.fill {
-  background-color: var(--orange-color);
-  border: 2.5px solid var(--orange-color);
+  background-color: var(--primary-orange);
+  border: 2.5px solid var(--primary-orange);
   color: white;
   border: none;
 }
@@ -39,7 +39,7 @@ button.fill:hover {
 button.stroke {
   border: 2.5px solid var(--button--dark-gray);
   background-color: transparent;
-  color: var(--orange-color);
+  color: var(--primary-orange);
 }
 
 button.stroke:hover {
