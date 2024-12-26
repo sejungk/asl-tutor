@@ -1,5 +1,7 @@
 :root {
   --orange-color: #FF8717;
+  --button--dark-gray: #E5E5E5;
+  --button--light-gray: #E6E6E6;
 }
 
 body {
@@ -11,12 +13,71 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  width: 400px;
+  text-align: center;
+}
+
+button.fill {
+  background-color: var(--orange-color);
+  border: 2.5px solid var(--orange-color);
+  color: white;
+  border: none;
+}
+
+button.fill:hover {
+  filter: brightness(0.9);
+}
+
+button.stroke {
+  border: 2.5px solid var(--button--dark-gray);
+  background-color: transparent;
+  color: var(--orange-color);
+}
+
+button.stroke:hover {
+  background-color: var(--button--light-gray);
+  color: white;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   color: #333;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 24px;
+  }
 }
