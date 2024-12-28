@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';  
 import './LoginPage.css';
 
-const LoginPage = () => {
+ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();  
@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-container">
-    <div className="login-content">
+      <div className="login-content">
         <div className="text">Login</div>
         <form onSubmit={handleSubmit}>
           <div className="field">
@@ -24,10 +24,10 @@ const LoginPage = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               className="input"
+              placeholder="Email or Phone"
             />
             <span className="span">
               <svg
-                className=""
                 style={{ enableBackground: 'new 0 0 512 512' }}
                 viewBox="0 0 512 512"
                 height="20"
@@ -42,7 +42,6 @@ const LoginPage = () => {
                 </g>
               </svg>
             </span>
-            <label className="label">Email or Phone</label>
           </div>
           <div className="field">
             <input
@@ -51,10 +50,10 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
               className="input"
+              placeholder="Password"
             />
             <span className="span">
               <svg
-                className=""
                 style={{ enableBackground: 'new 0 0 512 512' }}
                 viewBox="0 0 512 512"
                 height="20"
@@ -69,12 +68,11 @@ const LoginPage = () => {
                 </g>
               </svg>
             </span>
-            <label className="label">Password</label>
           </div>
           <div className="forgot-pass">
             <a href="#">Forgot Password?</a>
           </div>
-          <button type="submit" className="button">
+          <button type="submit" className="button fill">
             Sign in
           </button>
           <div className="sign-up">

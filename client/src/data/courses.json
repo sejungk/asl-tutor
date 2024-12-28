@@ -1,0 +1,33 @@
+[
+    {
+      "title": "The alphabet",
+      "cardColor": "#FFAE64",
+      "image": "/images/icons/alphabet-img.png"
+    },
+    {
+      "title": "Numbers",
+      "cardColor": "#C29EFF",
+      "image": "/images/icons/numbers-img.png"
+    },
+    {
+      "title": "Colors",
+      "cardColor": "#FF7070",
+      "image": "/images/icons/colors-img.png"
+    },
+    {
+      "title": "Greetings",
+      "cardColor": "#5FB2FF",
+      "image": "/images/icons/greetings-img.png"
+    },
+    {
+      "title": "Questions",
+      "cardColor": "#69DF9F",
+      "image": "/images/icons/questions-img.png"
+    },
+    {
+      "title": "Phrases",
+      "cardColor": "#FFD231",
+      "image": "/images/icons/phrases-img.png"
+    }
+  ]
+  

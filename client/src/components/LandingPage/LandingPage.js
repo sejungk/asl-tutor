@@ -17,7 +17,7 @@ const LandingPage = () => {
             Interactive learning made easy: Start mastering ASL.
           </h1>
           <img 
-            src="/images/asl-logo.svg" 
+            src="/images/icons/asl-logo.svg" 
             alt="ASL Logo" 
             className="landing-image" 
           />
@@ -26,7 +26,7 @@ const LandingPage = () => {
       <div className="right-side">
         <button 
           className="button stroke" 
-          onClick={() => alert("Get Started clicked")}
+          onClick={() => navigate('/get-started')}
         >
           Get Started
         </button>
