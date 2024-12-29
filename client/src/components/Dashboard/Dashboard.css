@@ -103,9 +103,18 @@ p {
   .course-grid {
     gap: 25px; 
   }
+  .dashboard-container {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 1024px) {
+  .dashboard-container {
+    justify-content: right;
+  }
+  .main-content {
+    margin-right: 0 30px;
+  }
   .course-grid {
     grid-template-columns: 1fr;
     gap: 30px; 
