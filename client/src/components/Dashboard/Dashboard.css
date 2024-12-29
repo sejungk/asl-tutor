@@ -1,23 +1,10 @@
 .dashboard-container {
   display: flex;
-  height: 100vh;
-  background-color: #f8f8f8;
-  padding: 50px;
+  min-height: 100vh;
+  padding: 65px 60px;
   box-sizing: border-box;
-}
-
-.sidebar {
-  background-color: #CEEDFF;
-  width: 400px;
-  padding: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
+  padding-left: 450px;
   position: relative;
-  box-shadow: 0px 10px 40px rgba(23, 33, 45, 0.15);
-  margin-right: 30px;
 }
 
 .profile-section {
@@ -95,7 +82,6 @@
 }
 
 p {
-  font-size: 16px;
   color: #555;
   margin-bottom: 30px;
 }
@@ -103,21 +89,49 @@ p {
 .course-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  height: 80%;
-  padding: 0;
-  box-sizing: border-box;
+  grid-gap: 40px; 
+  row-gap: 50px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1580px) {
   .course-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1350px) {
   .course-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 30px; 
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px; 
+    row-gap: 30px;
+  }
+  .dashboard-container {
+    padding: 65px 60px;
+  }
+}
+
+/* For very small screens (480px and below), adjust padding */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0 10px;
+  }
+  .course-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px; 
+    row-gap: 20px;
   }
 }

@@ -4,7 +4,7 @@ import './CourseCard.css';
 const CourseCard = ({ title, description, locked, progress, cardColor, image }) => {
   return (
     <div className={`course-card ${locked ? 'locked' : ''}`} style={{ backgroundColor: cardColor }}>
-      <h3>{title}</h3>
+      <h3 className="white">{title}</h3>
       {locked ? (
         <div className="locked-overlay">
           <img src="/images/icons/lock-icon.png" alt="Locked icon" className="locked-icon" />
