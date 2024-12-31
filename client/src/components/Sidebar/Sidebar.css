@@ -1,87 +1,113 @@
-/* Sidebar.css */
 .sidebar {
-    background-color: #CEEDFF;
-    width: 400px;
-    padding: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
-    /* position: relative;
-    box-shadow: 0px 10px 40px rgba(23, 33, 45, 0.15);
-    margin-right: 30px;
-    flex-shrink: 0; */
-    left: 50px;
-    position: fixed;
-    box-shadow: 0px 10px 40px rgba(23, 33, 45, 0.15);
-    flex-shrink: 0;
-    height: 87.5vh;
-    z-index: 100;
+  background-color: #CEEDFF;
+  width: 400px;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  left: 50px;
+  position: fixed;
+  box-shadow: 0px 10px 40px rgba(23, 33, 45, 0.15);
+  flex-shrink: 0;
+  height: 87.5vh;
+  z-index: 100;
+}
+
+.profile-section {
+  text-align: center;
+}
+
+.profile-section h4 {
+  margin: 15px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-links {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 15px 0;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;  
+  color: #5F6D75; 
+  padding: 20px 48px;
+  border-radius: 15px;
+}
+
+.nav-button svg, .nav-button svg path {
+  fill: #5F6D75;
+  color: #5F6D75;
+}
+
+.nav-button svg {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.nav-button svg path {
+  stroke: #5F6D75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sign-out.nav-button svg path {
+  fill: none;       
+}
+
+.nav-button.active {
+  background-color: #496FF4;  
+  color: white;  
+}
+
+.nav-button.active h4, .nav-button.active svg, .nav-button.active svg path {
+  fill: white;
+  stroke: white;
+  stroke-width: .3;
+}
+
+.nav-button {
+  text-decoration: none;
+  padding: 20px 40px;
+}
+
+button {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 380px;
   }
-  
-  .profile-section {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .profile-section h4 {
-    margin: 20px;
-  }
-  
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-  }
-  
-  nav {
-    width: 100%;
-  }
-  
-  .nav-links {
-    width: 100%;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin: 20px 0;
-  }
-  
   .nav-button {
-    display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #496FF4;
-    color: white;
-    padding: 20px 15px;
-    border-radius: 15px;
+    padding: 20px 35px;
   }
-  
-  .nav-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; 
   }
-  
-  .sign-out {
-    background-color: transparent;
-    color: #000;
-    padding: 10px 0;
-    font-weight: bold;
-  }
-  
-  button {
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      display: none; 
-    }
-  }
+}

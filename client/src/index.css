@@ -2,6 +2,7 @@
   --primary-orange: #FF8717;
   --button--dark-gray: #E5E5E5;
   --button--light-gray: #E6E6E6;
+  --text--medium-gray: #5F6D75;
 }
 
 body {
@@ -73,6 +74,14 @@ h4 {
   color: white;
 }
 
+.page-container {
+  padding: 65px 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 450px;
+  position: relative;
+}
 
 @media (max-width: 1350px) {
   h3 {

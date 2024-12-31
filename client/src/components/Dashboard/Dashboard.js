@@ -7,7 +7,7 @@ import Sidebar from '../Sidebar/Sidebar'; // Import the new Sidebar component
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container page-container">
       <Sidebar /> {/* Use the Sidebar component */}
       <div className="main-content">
         <div className="dashboard-text-content">
