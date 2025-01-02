@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './GetStartedPage.css';
+import './EnableWebcamPage.css';
 
-const GetStartedPage = () => {
+const EnableWebcamPage = () => {
   const [hasPermission, setHasPermission] = useState(null);
   const navigate = useNavigate();
 
@@ -28,8 +28,8 @@ const GetStartedPage = () => {
   };
 
   return (
-    <div className="get-started-container">
-      <div className="get-started-content">
+    <div className="enable-webcam-container">
+      <div className="enable-webcam-content">
         <h1 className="title">Enable Webcam Access</h1>
         <p className="description">
           To begin learning ASL interactively, we need access to your webcam.
@@ -51,4 +51,4 @@ const GetStartedPage = () => {
   );
 };
 
-export default GetStartedPage;
+export default EnableWebcamPage;

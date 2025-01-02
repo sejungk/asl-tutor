@@ -27,7 +27,8 @@
     {
       "title": "Phrases",
       "cardColor": "#FFD231",
-      "image": "/images/icons/phrases-img.png"
+      "image": "/images/icons/phrases-img.png",
+      "locked": "locked"
     }
   ]
   

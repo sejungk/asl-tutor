@@ -13,6 +13,7 @@
   overflow: visible;
   justify-content: space-between;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 /* Locked state styling */

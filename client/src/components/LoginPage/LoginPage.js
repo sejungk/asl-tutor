@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';  
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase/firebaseConfig'; 
 import './LoginPage.css';
 
- const LoginPage = () => {
+const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();  
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Logged In!');
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate('/dashboard'); 
+    } catch (err) {
+
+      if (err.code === 'auth/invalid-email') {
+        setError('Invalid email address.');
+      } else if (err.code === 'auth/wrong-password') {
+        setError('Incorrect password.');
+      } else if (err.code === 'auth/user-not-found') {
+        setError('No user found with this email.');
+      } else {
+        setError('Failed to login. Please check your credentials.');
+      }
+    }
   };
 
   return (
@@ -24,7 +41,7 @@ import './LoginPage.css';
               onChange={(e) => setEmail(e.target.value)}
               required
               className="input"
-              placeholder="Email or Phone"
+              placeholder="Email"
             />
             <span className="span">
               <svg
@@ -53,7 +70,7 @@ import './LoginPage.css';
               placeholder="Password"
             />
             <span className="span">
-              <svg
+             <svg
                 style={{ enableBackground: 'new 0 0 512 512' }}
                 viewBox="0 0 512 512"
                 height="20"
@@ -69,6 +86,7 @@ import './LoginPage.css';
               </svg>
             </span>
           </div>
+          {error && <p className="error-message">{error}</p>} 
           <div className="forgot-pass">
             <a href="#">Forgot Password?</a>
           </div>
@@ -85,3 +103,6 @@ import './LoginPage.css';
 };
 
 export default LoginPage;
+
+
+

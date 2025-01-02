@@ -26,7 +26,7 @@ const LandingPage = () => {
       <div className="right-side">
         <button 
           className="button stroke" 
-          onClick={() => navigate('/get-started')}
+          onClick={() => navigate('/enable-webcam')}
         >
           Get Started
         </button>

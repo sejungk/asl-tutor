@@ -1,4 +1,4 @@
-.get-started-container {
+.enable-webcam-container {
     background-color: #F5E8E0; /* Matching background */
     display: flex;
     justify-content: center;
@@ -6,7 +6,7 @@
     height: 100vh;
   }
   
-  .get-started-content {
+  .enable-webcam-content {
     width: 450px;
     padding: 60px 40px;
     border-radius: 20px;

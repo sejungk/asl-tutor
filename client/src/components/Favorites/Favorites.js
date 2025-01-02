@@ -9,7 +9,7 @@ const Favorites = () => {
       <div className="main-content">
         <div className="favorites-text-content">
           <h1 className="font-weight-500">Your Favorites</h1>
-          <p>Check out your favorite items!</p>
+          <p>Mark courses as favorites to easily access them here.</p>
         </div>
         <div className="favorites-content">
         </div>
